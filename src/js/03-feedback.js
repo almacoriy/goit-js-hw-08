@@ -25,8 +25,10 @@ function onFormInput(e) {
 function populateForm(formData) {
   formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
-  refs.mail.value = formData.email;
-  refs.textarea.value = formData.message;
+  if (formData) {
+    refs.mail.value = formData.email;
+    refs.textarea.value = formData.message;
+  }
 }
 
 function onFormSubmit(e) {
