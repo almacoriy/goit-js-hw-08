@@ -25,6 +25,7 @@ function onSaveInput() {
     message: message.value,
   };
 
+  console.log(email.value);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
